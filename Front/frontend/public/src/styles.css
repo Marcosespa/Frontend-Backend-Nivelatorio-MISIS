@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del usuario */
+.usuario-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.usuario-detalle {
+  display: flex;
+  align-items: center;
+}
+
+.usuario-detalle img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Botón de cerrar sesión */
+.btn-cerrar {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-cerrar:hover {
+  background-color: #c9302c;
+}
+
+/* Formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.formulario input, .formulario select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Botón de formularios */
+.btn {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #4cae4c;
+}
+
+/* Listas */
+.lista {
+  list-style: none;
+  padding: 0;
+}
+
+.lista li {
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

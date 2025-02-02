@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Tareas</title>
+    <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="usuario-info">
+            <div class="usuario-detalle">
+                <img id="fotoPerfil" src="" alt="Foto de perfil" width="100" style="display:none;">
+                <p>Bienvenido, <span id="nombre-usuario"></span>!</p>
+            </div>
+            <button id="btn-cerrar-sesion" class="btn-cerrar">Cerrar Sesión</button>
+        </header>
+
+        <section class="categorias">
+            <h2>Gestionar Categorías</h2>
+            <form id="form-categoria" class="formulario">
+                <input type="text" id="nombre-categoria" placeholder="Nombre de la categoría" required>
+                <input type="text" id="descripcion-categoria" placeholder="Descripción (opcional)">
+                <button type="submit" class="btn">Crear Categoría</button>
+            </form>
+            <ul id="lista-categorias" class="lista">
+            </ul>
+        </section>
+
+        <section class="tareas">
+            <h2>Crear Tarea</h2>
+            <form id="form-tarea" class="formulario">
+                <input type="text" id="texto-tarea" placeholder="Texto de la tarea" required>
+                <input type="date" id="fecha-creacion" required>
+                <input type="date" id="fecha-tentativa-finalizacion">
+                
+                <select id="estado" required>
+                    <option value="" disabled selected>Selecciona un estado</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En progreso">En progreso</option>
+                    <option value="Finalizada">Finalizada</option>
+                </select>
+
+                <select id="categoria" required>
+                    <option value="" disabled selected>Selecciona una categoría</option>
+                </select>
+
+                <button type="submit" class="btn">Agregar Tarea</button>
+            </form>
+        </section>
+
+        <section class="lista-tareas">
+            <h2>Mis Tareas</h2>
+            <ul id="lista-tareas" class="lista">
+            </ul>
+        </section>
+    </div>
+
+    <script src="/src/tareas.js"></script>
+</body>
+</html>
