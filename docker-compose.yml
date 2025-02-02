@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: ./Back
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./Back:/app  # Monta el código del backend dentro del contenedor
+      - sqlite_data:/app/tasks.db  # Persistencia de la base de datos SQLite
+    environment:
+      - FLASK_ENV=production
+
+  frontend:
+    build: 
+      context: ./Front
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    depends_on:
+      - backend
+
+volumes:
+  sqlite_data:
